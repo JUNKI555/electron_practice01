@@ -1,0 +1,15 @@
+{
+  "name": "electron_practice01",
+  "version": "0.0.1",
+  "description": "Hello Electron World",
+  "main": "index.js",
+  "repository": "git@github.com:JUNKI555/electron_practice01.git",
+  "author": "JUNKI555 <junki555@gmail.com>",
+  "license": "WTFPL",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^16.0.4"
+  }
+}
