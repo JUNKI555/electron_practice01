@@ -7,16 +7,21 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
+    alwaysOnTop: true
   })
 
   // laodURL
   mainWindow.loadURL('https://www.google.com/')
+  // mainWindow.setIgnoreMouseEvents(true)
 
   // デベロッパー ツールを開きます。
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
+
+  // ページ遷移後ロードが終わったら以下が実行される
+  mainWindow.webContents.on('did-finish-load', ()=>{
+    console.log("View");
+    // win.show();
+  });
 }
 
 // このメソッドは、Electron の初期化が完了し、
